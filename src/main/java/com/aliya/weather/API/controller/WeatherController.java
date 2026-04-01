@@ -69,6 +69,12 @@ public class WeatherController {
         return weatherService.getAllWeather();
     }
 
+    @GetMapping
+    public String getByCity(@RequestParam String city){
+
+        return weatherService.getByCity(city);
+    }
+
     // POST save
     @PostMapping
     public Weather saveWeather(@RequestBody Weather weather) {
